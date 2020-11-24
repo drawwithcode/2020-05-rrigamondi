@@ -1,0 +1,24 @@
+{
+  "name": "11-11-20_node",
+  "version": "1.0.0",
+  "description": "node test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrigamondi/11-11-20_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrigamondi/11-11-20_node/issues"
+  },
+  "homepage": "https://github.com/rrigamondi/11-11-20_node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.1"
+  }
+}
