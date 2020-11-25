@@ -38,7 +38,7 @@ function otherMouse(data){
   push();
     background(bckgCol);
 
-    sizeVar = int(dist(0, 0, mX, mY));
+    sizeVar = int(dist(0, 0, data.mX, data.mY));
 
     data.x = map(data.x,0,data.win_w,0,width, true);
     data.y = map(data.y,0,data.win_h,0,height, true);
