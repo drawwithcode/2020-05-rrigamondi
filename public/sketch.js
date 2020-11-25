@@ -21,22 +21,28 @@ function setup() {
 }
 
 function draw() {
-  sizeVar = int(dist(mouseX, mouseY, pmouseX, pmouseY));
     let message = {
       x: mouseX,
       y: mouseY,
-      sizeVar: map(sizeVar, 1, 120, 0, 1, true),
+      mX: movedX,
+      mY: movedY,
       win_w: width,
       win_h: height
     };
     socket.emit('mouseMoved', message);
 }
+
 function otherMouse(data){
+  let sizeVar;
+
   push();
     background(bckgCol);
+
+    sizeVar = int(dist(0, 0, mX, mY));
+
     data.x = map(data.x,0,data.win_w,0,width, true);
     data.y = map(data.y,0,data.win_h,0,height, true);
-    image(halo, data.x-(haloSize/2)*data.sizeVar-2, data.y-(haloSize/2)*data.sizeVar-2, haloSize*data.sizeVar-4, haloSize*data.sizeVar-4);
+    image(halo, data.x-(haloSize/2)*sizeVar, data.y-(haloSize/2)*sizeVar, haloSize*sizeVar, haloSize*sizeVar);
   pop();
 }
 
